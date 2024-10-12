@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="imag/assoalhos modelo.PNG" type="image/x-icon">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jasonday/printThis@1.15.0/printThis.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="java.js"></script>
+  <title>Recibo - Assoalho Modelo</title>
+
+  </style>
+</head>
+
+<body>
+  <div class="dados">
+    Recebemos de:
+    <input type="text" id="nome"> <br> <br>
+    Valor R$:
+    <input type="text" id="numero" onchange="escreverExtenso()"><br><br>
+    A importância de:
+    <input type="text" id="extensao" onchange="atualizarExtensao()">
+    <br><br>
+    Referente:
+    <select id="referente" onchange="mostrarCampoPersonalizado(this)">
+      <option value=""></option>
+      <option value="Lixamento e aplicação de selador para cera.">Lixamento e aplicação de selador para cera.</option>
+      <option value="Reparo em várias avarias.">Reparo em várias avarias.</option>
+      <option value="outro">Outra opção</option>
+    </select>
+
+    <div id="campoPersonalizado" style="display: none;">
+      <textarea type="text" id="referentePersonalizado" placeholder="Digite um texto personalizado"></textarea>
+    </div>
+    <br> <br>
+    Endereço:
+    <input type="text" id="endereco"> <br> <br>
+    Data:
+    <input type="text" id="data"><br><br>
+    CP:
+    <input type="text" step="0.01" id="cp"> <br><br>
+    Código:
+    <select id="codigo" onchange="mostrarCampoPersonalizado(this)">
+      <option value="685">685</option>
+      <option value="">nenhum</option>
+    </select>
+    <br> <br>
+    Parcela:
+
+    <select id="parcela" onchange="mostrarCampoPersonalizado(this)">
+      <option value="1">1</option>
+      <option value="1/2">1/2</option>
+      <option value="2/2">2/2</option>
+      <option value="1/3">1/3</option>
+      <option value="2/3">2/3</option>
+      <option value="3/3">3/3</option>
+      <option value="1/4">1/4</option>
+      <option value="2/4">2/4</option>
+      <option value="3/4">3/4</option>
+      <option value="4/4">4/4</option>
+      <option value="">nenhuma</option>
+    </select>
+
+    <br><br>
+    Tamanho
+    <select id="tamanho" onchange="tamanho(this)">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+
+    <br> <br>
+    <div id="botoes">
+      <button onclick="emitirPC()">Emitir PC</button> 
+      <button onclick="gerarRecibo()">Gerar Recibo</button>
+      <button onclick="verRecibo()">Ver Recibo</button>
+      <button onclick="limparCampos()">Limpar campos</button>
+
+    </div>
+    <!-- <button onclick="emitirCelular()">Emitir no celular</button> -->
+  </div>
+  <br><br><br><br><br><br><br>
+  <br><br><br><br><br><br>
+  <br><br><br><br><br><br>
+
+  <div id="print2">
+    <div id="print" class="recibo" style="margin-left: 0;">
+      <div class="cabecalho">Assoalhos Modelo</div>
+      <div class="titulo-recibo">Recibo</div>
+      <div class="logo-empresa">
+        <img src="imag/assoalhos modelo.PNG" alt="Logo da Empresa" style="width: 100px; height: 100px;">
+      </div>
+      <br>
+      <div class="conteudo-recibo">
+        <p>Recebemos de: <span id="recibo_nome"></span></p>
+        <hr>
+        <div class="valor-recibo1">
+          <p>Valor: R$<span id="recibo_numero"></span></p>
+        </div>
+        <hr>
+        <p>A importância: <span id="recibo_extensao" contenteditable="true"></span></p>
+        <hr>
+        <div class="parcela-recibo1">
+          <p>Parcela: <span id="recibo_parcela"></span></p>
+        </div>
+        <hr>
+        <p>Referente: <span id="recibo_referente"></span></p>
+        <hr>
+        <p>Endereço: <span id="recibo_endereco"></span></p>
+        <hr>
+        <div class="cp-recibo1" id="cp-recibo1">
+          <p>CP: <span id="recibo_cp"></span></p>
+        </div>
+
+        <div class="codigo-recibo1" id="codigo-recibo1">
+          <p>Código: <span id="recibo_codigo"></span></p>
+        </div>
+        <div class="local-data">
+          <p>Curitiba, <span id="recibo_data"></span></p>
+        </div>
+        <hr>
+        <p>Emerson Vargas de Oliveira/CPF 022.339.829-24</p>
+      </div>
+    </div>
+    <br>
+  </div>
+</body>
+
+</html>

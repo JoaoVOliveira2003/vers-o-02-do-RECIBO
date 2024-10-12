@@ -1,0 +1,220 @@
+* {
+  padding: 0;
+  margin: 0; /* Remove margens e preenchimentos padrão de todos os elementos */
+}
+
+/* Estilos para o recibo referente */
+#recibo_referente {
+  word-wrap: break-word; /* Para navegadores mais antigos */
+  overflow-wrap: break-word; /* Para navegadores modernos */
+  display: inline-block; /* Permite a quebra de linha */
+  max-width: 100%; /* Garante que não ultrapasse a largura da div */
+}
+
+/* Estilos gerais para o recibo */
+.recibo {
+  word-wrap: break-word; /* Para permitir quebra de palavras */
+  word-break: break-all; /* Quebra palavras longas */
+  overflow-wrap: break-word; /* Para compatibilidade com navegadores modernos */
+}
+
+/* Estilos para o valor do recibo */
+.valor-recibo1 {
+  margin-left: 80%; /* Margem à esquerda para posicionar à direita */
+  margin-top: 10px; /* Margem superior */
+  position: relative; /* Para ajustar a posição */
+  top: 30px; /* Ajusta a posição vertical */
+}
+
+/* Estilos para a parcela do recibo */
+.parcela-recibo1 {
+  margin-left: 80%; /* Margem à esquerda */
+  margin-top: 10px; /* Margem superior */
+  position: relative; /* Para ajustar a posição */
+  top: 0px; /* Posição padrão */
+}
+
+/* Estilos para o primeiro CP (Código de Protocolo) */
+.cp-recibo1 {
+  margin-left: 80%; /* Margem à esquerda */
+  margin-top: 10px; /* Margem superior */
+  position: relative; /* Para ajustar a posição */
+  top: -180px; /* Ajuste específico para o CP */
+}
+
+/* Estilos para o primeiro código do recibo */
+.codigo-recibo1 {
+  margin-left: 80%; /* Margem à esquerda */
+  margin-top: 10px; /* Margem superior */
+  position: relative; /* Para ajustar a posição */
+  top: -180px; /* Ajuste específico */
+}
+
+/* Estilos para o segundo CP */
+.cp-recibo2 {
+  position: relative; /* Para ajustar a posição */
+  margin-left: 80%; /* Margem à esquerda */
+  top: -200px; /* Ajuste específico */
+}
+
+/* Estilos para o segundo código do recibo */
+.codigo-recibo2 {
+  margin-left: 80%; /* Margem à esquerda */
+  margin-top: 10px; /* Margem superior */
+  position: relative; /* Para ajustar a posição */
+  top: -202px; /* Ajuste específico */
+}
+
+/* Estilos para botões */
+button {
+  width: 120px; /* Largura do botão reduzida */
+  height: 40px; /* Altura do botão reduzida */
+}
+
+/* Estilos para o terceiro CP */
+.cp-recibo3 {
+  margin-left: 80%; /* Margem à esquerda */
+  margin-top: 10px; /* Margem superior */
+  position: relative; /* Para ajustar a posição */
+  top: -220px; /* Ajuste específico */
+}
+
+/* Estilos para o terceiro código do recibo */
+.codigo-recibo3 {
+  margin-left: 80%; /* Margem à esquerda */
+  margin-top: 10px; /* Margem superior */
+  position: relative; /* Para ajustar a posição */
+  top: -220px; /* Ajuste específico */
+}
+
+/* Estilos para o quarto CP */
+.cp-recibo4 {
+  margin-left: 80%; /* Margem à esquerda */
+  margin-top: 10px; /* Margem superior */
+  position: relative; /* Para ajustar a posição */
+  top: -240px; /* Ajuste específico para o CP com 4 linhas */
+}
+
+/* Estilos para o quarto código do recibo */
+.codigo-recibo4 {
+  margin-left: 80%; /* Margem à esquerda */
+  margin-top: 10px; /* Margem superior */
+  position: relative; /* Para ajustar a posição */
+  top: -240px; /* Ajuste específico */
+}
+
+/* Estilos para a seção de dados */
+.dados {
+  padding: 20px; /* Preenchimento interno */
+  font-size: 20px; /* Tamanho da fonte */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fonte */
+}
+
+/* Estilos para o cabeçalho do recibo */
+.cabecalho {
+  font-weight: bold; /* Negrito */
+  margin-left: 30%; /* Margem à esquerda */
+  font-size: 1.3em; /* Tamanho da fonte */
+  margin-top: 33px; /* Margem superior */
+}
+
+/* Estilos para o título do recibo */
+.titulo-recibo {
+  font-weight: bold; /* Negrito */
+  margin-left: 38%; /* Margem à esquerda */
+  font-size: 1.3em; /* Tamanho da fonte */
+}
+
+/* Estilos para o logo da empresa */
+.logo-empresa {
+  margin-left: 80%; /* Margem à esquerda */
+  margin-top: -66px; /* Ajusta a posição vertical */
+  position: relative; /* Para ajustar a posição */
+}
+
+/* Estilos para o conteúdo do recibo */
+.conteudo-recibo {
+  font-size: 1.1em; /* Tamanho da fonte */
+}
+
+/* Estilos para a localização e data */
+.local-data {
+  margin-top: -55px; /* Margem superior */
+  position: relative; /* Para ajustar a posição */
+}
+
+/* Estilos gerais para o recibo */
+.recibo {
+  font-family: sans-serif; /* Fonte padrão */
+  border: 1px solid black; /* Borda do recibo */
+  width: 800px; /* Largura do recibo */
+  margin-top: 10px; /* Margem superior */
+  margin: 1; /* Margem geral */
+  padding: 1; /* Preenchimento */
+}
+
+/* Estilos para a linha horizontal */
+hr {
+  margin: 2px 0; /* Margem vertical */
+  border-color: black; /* Cor da borda */
+  width: 100%; /* Largura total */
+}
+
+/* Estilos para o campo de referência personalizado */
+#referentePersonalizado {
+  width: 383px; /* Largura do campo */
+}
+
+/* Estilos gerais para o corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Fonte padrão */
+}
+
+/* Estilos para a seção de dados */
+.dados {
+  max-width: 600px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  background-color: #f9f9f9; /* Cor de fundo */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 20px; /* Preenchimento */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para os botões */
+#botoes {
+  display: flex; /* Exibe os botões em flexbox */
+  flex-direction: row; /* Coluna para empilhar os botões */
+  justify-content: flex-end; /* Alinha os botões à direita */
+  flex-wrap: wrap; /* Permite que os botões quebrem em linha nova */
+  margin-top: 20px; /* Espaçamento acima dos botões */
+}
+
+/* Estilos para os botões dentro da seção #botoes */
+#botoes button {
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  border: none; /* Remove borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px 15px; /* Espaçamento interno dos botões */
+  margin: 5px; /* Margem ao redor dos botões */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+/* Estilos para o estado de hover dos botões */
+#botoes button:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos responsivos para telas pequenas */
+@media (max-width: 600px) {
+  #botoes {
+    flex-direction: column; /* Empilha os botões em coluna */
+    align-items: stretch; /* Estica os botões para preencher a largura */
+  }
+  
+  /* Largura dos botões em telas pequenas */
+  #botoes button {
+    width: 100%; /* Largura total dos botões */
+  }
+}
